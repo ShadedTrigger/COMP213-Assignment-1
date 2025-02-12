@@ -11,7 +11,6 @@ h1 {
 
 body {
     background-image: linear-gradient(#ccff33, white);
-    
 }
 
 img {
@@ -32,10 +31,23 @@ main {
     display: block;
 }
 
+.indent {
+    margin-left: 1%;
+}
+
 footer {
     width: 80%;
     margin: auto;
     background-color: white;
+}
+
+legend {
+    font-weight: bold;
+}
+
+fieldset {
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 * {
