@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+head, nav, main, aside, footer {
+    background-color: #ffffff;
+}
+
+body {
+    background-color: #3b3b3b;
+    min-width: 500px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+nav ol {
+    text-align: center;
+    list-style-type: none;
+    background-color: grey;
+}
+
+nav li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+nav li:first-child {
+    border-top: 1px solid black;
+}
+
+main {
+    padding: 5%;
+}
+
+aside {
+    text-align: center;
+}
+
+aside img {
+    width: 300px;
+    height: auto;
+    margin: 25px;
+}
+
+footer {
+    border-top: 1px solid black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+@media screen and (min-width: 680px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "main aside"
+            "footer footer";
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    nav ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav li:first-child {
+        border-top: none;
+    }
+
+    aside img {
+        width: 200px;
+        height: auto;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "nav main aside"
+            "footer footer footer";
+        grid-template-columns: 150px, 2fr, 1fr;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    aside img {
+        width: 300px;
+        height: auto;
+    }
+
+    nav ol {
+        display: block;
+        width: 10em;
+    }
+    
+    nav li {
+        display: block;
+    }
+}
