@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sunnyside Crepes - Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <header>
+    <img
+      src="./crepe_logo.png"
+      alt="Logo of a crepe"
+      width="100px"
+      height="100px"
+    />
+    <h1>Sunnyside Crepes</h1>
+  </header>
+  <nav>
+    <ol>
+      <li><a href="./homepage.html">Home</a></li>
+      <li><a href="./items.html">Menu</a></li>
+      <li id="activeLink"><a href="#">Contact</a></li>
+      <li><a href="./sitemap.html">Sitemap</a></li>
+    </ol>
+  </nav>
+  <main>
+    <h2>Have a Question? Feel Free to Contact Us.</h2>
+    <form>
+      <fieldset>
+        <legend>Your Information</legend>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" /><br />
+        <label for="phone">Phone Number: </label>
+        <input type="text" id="phone" name="phone" /><br />
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email" /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Your Reason for Contact</legend>
+        <label for="comments">Describe your issue: </label>
+        <br />
+        <textarea id="comments" name="comments" cols="50" rows="4"></textarea>
+
+        <p>How urgent is your issue?</p>
+        <input
+          type="radio"
+          id="Not Very Urgent"
+          name="urgency"
+          value="Not Very Urgent"
+        />
+        <label for="Not Very Urgent">Not Very Urgent</label>
+        <input
+          type="radio"
+          id="Somewhat Urgent"
+          name="urgency"
+          value="Somewhat Urgent"
+        />
+        <label for="Somewhat Urgent">Somewhat Urgent</label>
+        <input type="radio" id="Urgent" name="urgency" value="Urgent" />
+        <label for="Urgent">Urgent</label><br /><br />
+
+        <label for="teaching">How should we contact you?</label>
+        <select id="teaching" name="teaching">
+          <option value="invalid">--Select One--</option>
+          <option value="text">Text</option>
+          <option value="call">Call</option>
+          <option value="email">Email</option>
+          <option value="other">Other (Please specify)</option>
+        </select>
+      </fieldset>
+      <input type="submit" value="Submit" />
+      <input type="reset" />
+    </form>
+  </main>
+  <aside>
+    <img
+      src="./stevesmith.png"
+      alt="Portrait of Steve Smith, Owner"
+      width="300px"
+      height="390px"
+    />
+    <p>Phone #: (613) 222-555</p>
+    <p>
+      Email:
+      <a href="mailto:sunnysidecrepes@gmail.com">sunnysidecrepes@gmail.com</a>
+    </p>
+  </aside>
+  <footer>
+    <p>Copyright © 2025</p>
+  </footer>
+</html>

@@ -5,16 +5,16 @@
 }
 
 head, nav, main, aside, footer {
-    background-color: #ffffff;
+    background-color: #FFF2D7;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-nav ol, aside {
-    background-color:darkseagreen;
+nav , aside {
+    background-color:#D09683;
 }
 
 body {
-    background-color: black;
+    background-color: #2A3132;
     min-width: 500px;
 }
 
@@ -22,15 +22,53 @@ header {
     display: flex;
     align-items: center;
     gap: 1em;
+    color:darksalmon;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 header, footer {
-    background-color: chocolate;
+    background-color: #73605B;
 }
 
 nav ol {
     text-align: center;
     list-style-type: none;
+}
+
+nav a {
+    color: #2A3132;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav li:hover {
+    background-color: #73605B;
+    cursor: pointer;
+}
+
+#activeLink {
+    background-color: #FFF2D7;
+}
+
+.bigLink {
+    font-size: 1.5em;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 2%;
+}
+
+.flex-container .text {
+    flex: 2;
+}
+
+.flex-container img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
 }
 
 nav li {
@@ -47,8 +85,25 @@ main {
     padding: 5%;
 }
 
+main ul {
+    padding-left: 5%;
+}
+
+main h2:first-child {
+    padding-top: 0;
+}
+
+main p, ul, h2, h3 {
+    padding-top: 1em;
+}
+
+main p {
+    padding-bottom: 1em;
+}
+
 aside {
     text-align: center;
+    padding: 2%;
 }
 
 aside img {
@@ -62,6 +117,42 @@ footer {
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFF2D7;
+}
+
+fieldset {
+    padding: 2%;
+}
+
+input {
+    margin: 5px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+dd {
+    display: list-item;
+    margin-bottom: 0.5em;
+    margin-left: 80px;
+    list-style-type: circle;
+}
+dt {
+    margin-bottom: 0.5em;
+    list-style-type: disc; 
+    display: list-item;
+    margin-left: 40px;
 }
 
 @media screen and (min-width: 680px) {
@@ -88,6 +179,8 @@ footer {
 
     aside {
         grid-area: aside;
+        display: flex;
+        flex-direction: column;
     }
 
     footer {
@@ -102,20 +195,29 @@ footer {
 
     nav li {
         border: none;
+        flex: 1;
+        width: 100%;
+    }
+
+    nav li a {
+        display: block;
+        padding: 10px;
+        text-align: center;
     }
 
     nav li:first-child {
         border-top: none;
     }
 
-    aside img {
-        width: 200px;
-        height: auto;
-    }
-
     aside {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    aside img {
+        width: 200px;
+        height: auto;
     }
 }
 
@@ -131,9 +233,7 @@ footer {
         margin: auto;
     }
 
-    aside {
-        display: grid;
-    }
+   
 
     aside img {
         width: 300px;
@@ -142,10 +242,10 @@ footer {
 
     nav ol {
         display: block;
-        width: 10em;
     }
     
     nav li {
         display: block;
+        width: 150px
     }
 }
